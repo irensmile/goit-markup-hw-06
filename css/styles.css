@@ -19,6 +19,9 @@
 h1,h2,h3,h4,h5,h6,p {
     margin: 0;
 }
+@media screen and (min-width: 500) {
+  body  
+}
 ul, ol {
     margin: 0;
     padding: 0;
@@ -47,7 +50,7 @@ body{
     background-color: var(--body_bgr);
 }
 
-.middle_header{
+.middle-header{
     font-weight: 700;
     font-size: 36px;
     line-height: 40px;
@@ -58,15 +61,17 @@ body{
     text-transform: capitalize;  
     margin-bottom: 72px;
 }
-.small_header{
+.small-header{
     letter-spacing: 0.02em;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 36px;
+    /*font-size: 20px;*/
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
     margin-bottom: 8px;
 }
+
 .nav-link{
     position: relative;
     font-weight: 500;
@@ -125,13 +130,42 @@ body{
     justify-content: space-between;
     gap: 40px;
 }
+@media screen and (max-width:767px){
+.address-container{
+    display: none;
+}
+}
+.menu-icon {
+    stroke-width: 3px;
+        stroke: var(--navyblue, #2E2F42);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+@media screen and (min-width: 768px) {
+ .menu-container{
+    display: none;
+    }   
+}
+
 
 .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
     /*
     padding-top: 60px;
     padding-bottom: 60px; */
 }
-
+@media only screen and (min-width: min-width:768px) {
+ .section  {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+@media only screen and (min-width: min-width:1440px) {
+    .section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
 .btn-hero{
     cursor: pointer;
     /* IRIS */
@@ -337,14 +371,31 @@ body{
     padding: 32px 0;    
     margin: 0 auto;
 }
-
+/* base stile for small devises*/
 .container {
-   margin-left: auto;
-   margin-right: auto;
-   padding-left: 15px;
-   padding-right: 15px;
-   width: 1158px; /*+30px*/ 
+    min-width: 320px;
+    max-width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    /*width: 1158px; /*+30px*/
+    outline: 1px solid red; 
 }
+/*tablet*/
+@media screen and (min-width:768px) {
+ .container{
+        max-width: 768px;
+}   
+}
+/*desktop */
+@media screen and (min-width:1158px) {
+ .container
+ {
+    max-width: 1158px;
+ }   
+}
+
 
 .header{
     padding-top: 24px;
@@ -355,6 +406,7 @@ body{
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 1px 6px rgba(46, 47, 66, 0.08);;
 }
+
 
 .header-container{
     display:flex;
@@ -374,10 +426,29 @@ body{
     position: relative;
 
 }
+@media screen and (max-width: 767px) {
+  .header-list {
+    display: none;
+  }  
+}
 .strategy-container{
+    
+    /*display: flex;
+    align-items: center;
+    gap: 24px;*/
+}
+@media screen and (min-width: 768px){
+.strategy-container {
     display: flex;
     align-items: center;
     gap: 24px;
+    flex-wrap: wrap;
+}
+}
+@media screen and (min-width: 1158px) {
+    .strategy-container {
+        flex-wrap: nowrap;
+    }
 }
 .doing-container {
     display: flex;
@@ -389,12 +460,33 @@ body{
     width: 360px;
 }
 .strategy-element {
+
     display: flex;
-    width: 264px;
+    /*width: 264px;*/
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    /*align-items: flex-start;*/
     gap: 8px;
 }
+@media screen and (min-width:768px){
+    .strategy-element {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+}
+@media screen and (max-width: 767px) {
+.strategy-element:not(:last-child){
+    margin-bottom: 72px;
+    margin: 0 auto;
+}    
+}
+@media screen and (min-width:1158px) {
+    .strategy-element {
+    width: 264px;
+    }
+}
+
+
+
 .strategy-section {
     padding: 120px 0;
     
@@ -404,6 +496,18 @@ body{
     fill: #f4f4fd;
 }
 .strategy-link {
+    display: none;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    background: var(--cloud);
+    border-radius: var(--small-radius);
+    margin-bottom: 8px;*/
+}
+@media screen and (min-width:1158px) {
+  .strategy-link{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -412,6 +516,7 @@ body{
     background: var(--cloud);
     border-radius: var(--small-radius);
     margin-bottom: 8px;
+  }  
 }
 .doing-section {
     padding-bottom: 120px;
