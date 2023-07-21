@@ -72,6 +72,7 @@ body{
     margin-bottom: 8px;
 }
 
+
 .nav-link{
     position: relative;
     font-weight: 500;
@@ -208,7 +209,7 @@ body{
     text-transform: uppercase;
     /* IRIS */
     color: #4D5AE5; 
-    margin-right: 76px;
+    /* margin-right: 76px; */
     display: inline-block;
 }
 
@@ -228,22 +229,78 @@ body{
     
     padding-top: 188px;
     padding-bottom: 188px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+        url(../images/hero_image/people-office_mobile@1x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    max-width: 1440px;
     margin: 0 auto;
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx){
+    .hero-section{
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero_image/people-office_mobile@2x.jpg);
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .hero-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero_image/people-office_tablet@1x.jpg);
+    }
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero-section {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/hero_image/people-office_tablet@2x.jpg);
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1158) {
+    .hero-section {
+        max-width: 1440px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero_image/people-office_desk@1x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero-section {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/hero_image/people-office_desk@2x.jpg);
+        }
+    }
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero_image/people-office_tablet@2x.jpg);
+    }
+}
+
 .hero{
+    font-size: 36px;
     font-weight: 700;
-    font-size: 56px;
     line-height: 1.07;
     text-align: center;
     letter-spacing: 0.02em;
     color: #FFFFFF; 
-    max-width: 496px;      
+    max-width: 320px;
+}
+
+@media only screen and (min-width: 768px){
+    .hero {
+        font-size: 56px;
+        max-width: 496px
+    }
 }
 
 .hero-container {
@@ -311,13 +368,15 @@ body{
     gap: 24px;
 }
 
+@media screen and (max-width: 767px) {
+    .customers-list {
+        flex-wrap: wrap;
+    }
+    
+}
+
 .customers-section {
     padding: 120px 0
-}
-.footer{
-    background: #2E2F42;
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
 .logo-third{
     color: #f4f4fd;
@@ -385,8 +444,7 @@ body{
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
-    /*width: 1158px; /*+30px*/
-    outline: 1px solid red; 
+    /* outline: 1px solid red; */
 }
 /*tablet*/
 @media screen and (min-width:768px) {
@@ -404,8 +462,8 @@ body{
 
 
 .header{
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     border-bottom: 1px solid #e7e9fc;
     /* Does it make a difference? */
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -424,6 +482,7 @@ body{
     flex-direction: row;
     align-items:center;
     justify-content:space-between;
+    height: 70px;
 }
 
 .header-nav{
@@ -478,6 +537,7 @@ body{
     align-items: center;
     /*align-items: flex-start;*/
     gap: 8px;
+    margin-bottom: 0;
 }
 @media screen and (min-width:768px){
     .strategy-element {
@@ -485,9 +545,8 @@ body{
     }
 }
 @media screen and (max-width: 767px) {
-.strategy-element:not(:last-child){
-    margin-bottom: 72px;
-    margin: 0 auto;
+    .strategy-element:not(:last-child){
+        margin: 0 auto 72px auto;
 }    
 }
 @media screen and (min-width:1158px) {
@@ -534,17 +593,28 @@ body{
 }
 .team-list {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 72px;
     align-items: center;
     margin-top: 72px; 
-       
 }
-.team-container{
-    padding: 32px 0;
+
+@media screen and (min-width: 768) {
+    .team-list{
+        gap: 24px;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .team-container{
+        padding: 32px 0;
+    }
 }
 .team-header{
     text-align: center;
     margin-bottom: 8px;
+    font-size: 20px;
 }
 .team-link {
     width: 40px;
@@ -571,14 +641,58 @@ body{
     gap: 24px;
 
 }
+.footer {
+    width: 100%;
+    background: #2E2F42;
+    padding: 96px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        padding: 100px 0px;
+    }
+}
 .footer-container {
     display: flex;
+    flex-direction: column;
+    gap:72px;
+    margin: 0 auto;
+    /*align-items: center;
+    justify-content: center;
     align-items: baseline;
-    flex-shrink: 0;
+    flex-shrink: 0;*/
+}
+
+@media screen and (min-width: 768px) {
+    .footer-container{
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 758px) {
+    .footer-container{
+
+    }
+}
+
+@media screen and (min-width: 1158) {
+    .footer-container {}
 }
 
 .footer-info {
-    margin-right: 120px;
+   text-align: center;
+   margin: 0 auto;
+}
+@media screen and (min-width: 758px) {
+    .footer-info {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1158) {
+    .footer-info {
+        margin-right: 120px;
+    }
 }
 
 .footer-social{
@@ -617,6 +731,7 @@ body{
 }
 
 .footer-subscribe-text {
+    text-align: center;
     color: var(--white, #FFF);
     font-size: 16px;
     font-weight: 500;
@@ -624,8 +739,14 @@ body{
     letter-spacing: 0.32px;
     margin-bottom: 16px;
 }
+
+@media screen and (min-width: 768px){
+.footer-subscribe-text {
+        text-align: left;
+    }
+}
 .footer-subscribe-input {
-    width: 264px;
+    width: 398px;
     height: 40px;
     border-radius: 4px;
     border: 1px solid var(--white, #FFF);
@@ -638,7 +759,12 @@ body{
     padding: 8px 16px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
-
+@media screen and (min-with: 768px) {
+    .footer-subscribe-input{
+        width: 264px;
+    }
+    
+}
 .footer-subscribe-button{
     min-width: 165px;
     cursor: pointer;
@@ -676,7 +802,15 @@ body{
     display: flex;
     gap: 24px;
     align-items: center;
+    flex-direction: column;
 }
+
+@media screen and (min-width: 768px){
+    .footer-subscribe-form {
+        flex-direction: row;
+    }
+}
+
 .portfolio-filters {
     display: flex;
     align-items: center;
