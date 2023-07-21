@@ -605,12 +605,6 @@ body{
     padding-bottom: 120px;
 }
 
-@media screen and (max-width: 1157) {
-    .doing-section {
-        display: none;
-    }
-    
-}
 .team-list {
     display: flex;
     flex-direction: column;
