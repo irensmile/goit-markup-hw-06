@@ -700,21 +700,12 @@ body{
 }
 
 
-@media screen and (min-width: 1158) {
-    .footer-container {}
-}
-
 .footer-info,
 .footer-social {
    text-align: center;
    margin: 0 auto;
 }
 
-@media screen and (min-width: 1158) {
-    .footer-info {
-        margin-right: 120px;
-    }
-}
 @media screen and (min-width: 758px) {
     .footer-info {
         text-align: left;
