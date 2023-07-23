@@ -229,9 +229,8 @@ body{
 }
 
 .hero-section{
-    
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding-top: 112px;
+    padding-bottom: 112px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
         url(../images/hero_image/people-office_mobile@1x.jpg);
     background-repeat: no-repeat;
@@ -265,6 +264,8 @@ body{
 
 @media only screen and (min-width: 1158px) {
     .hero-section {
+        padding-top: 188px;
+        padding-bottom: 188px;
         max-width: 1440px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url(../images/hero_image/people-office_desk@1x.jpg);
