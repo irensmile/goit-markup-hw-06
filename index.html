@@ -415,7 +415,11 @@
     </main>
     <!-- Mobile menu popup-->
     <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="menu-toggle-close js-close-menu">
+      <button
+        class="menu-toggle-close js-close-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
         <svg
           fill="currentColor"
           viewBox="0 0 20 20"
@@ -536,7 +540,7 @@
         <div class="empty">
           <p class="footer-subscribe-text">Subscribe</p>
           <form name="subscribe_form" class="footer-subscribe-form">
-            <label class="empty">
+            <label class="subscribe-label">
               <input
                 type="email"
                 name="subscribe-email"
