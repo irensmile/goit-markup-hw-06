@@ -558,9 +558,13 @@ body{
 @media screen and (min-width:768px){
     .strategy-element {
         flex-basis: calc((100% - 24px) / 2);
+        align-items: flex-start;
     }
 }
 @media screen and (max-width: 767px) {
+    .strategy-element{
+        align-items: center;
+    }
     .strategy-element:not(:last-child){
         margin: 0 auto 72px auto;
 }    
