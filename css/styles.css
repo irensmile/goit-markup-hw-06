@@ -693,7 +693,7 @@ body{
     .footer-container{
         flex-wrap: nowrap;
         width: 100%;
-        justify-content: space-between;
+        gap: 0;
     }
 }
 
@@ -718,7 +718,10 @@ body{
 
 @media screen and (min-width: 1158px) {
     .footer-info{
-        margin-right: 40px
+        margin-right: 120px;
+    }
+    .footer-info-div {
+        margin-right: 80px;
     }
     
 }
